@@ -1,0 +1,414 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*css da pagina produtos*/
+header{
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    background-color: #BBBBBB;
+}
+
+nav li{
+    display: inline;            /*exibir em linha. | block bloqueia o resto da lniha*/
+    margin: 0 0 0 15px;         /*espaçamento na linha >> top right button left*/
+}
+
+nav a{
+    text-transform: uppercase;  /*Letras em MAIUSCULAS*/
+    color: #000;
+    font-weight: bold;          /*letras em NEGRITO*/
+    font-size: 22px;
+    text-decoration: none;      /*nega a decoração do texto (sublinhado do link)*/
+}
+
+nav a:hover{            /*:hover >> mapeia a passagem do mouse no elemento*/
+    color: blue;       /*com a passagem do mouse é possível atribuir ações como mudar cores e efeitos*/
+    text-decoration: underline;
+}
+
+nav{
+    position: absolute;
+    right: 0px;
+    top: 115px;
+}
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;     /*0 >> top/button   auto >> right/left */
+    padding: 50px 0;    /*50 >> top/button   0 >> right/left */
+}
+
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /*background-color: #cccccc;*/
+    margin: 0 1.5%;                 /*espaçamento entre os blocos 'li'*/
+    padding: 30px 20px;             /*espaçamento interno no bloco 'li'*/
+    box-sizing: border-box;         /*define o tamnho max do elemento c base no width*/
+    border: 2px solid #000;
+    /*  widht   style   cor
+    border acima tem o mesmo efeito que as 3 declarações abaixo
+    border-color: #000;             
+    border-width: 2px;
+    border-style: solid;*/
+    border-radius: 10px;        /*'border-radius: 10px 20px 30px 40px' caso queira definir separadamente*/
+    
+}
+
+.produtos li:hover{
+    border-color: blue;
+}
+
+.produtos li:hover h2{      /*quando o mouse estiver em 'li' a ação ocorre em h2*/
+    font-size: 33px;
+}
+
+.produtos li:hover .produto-preco{      /*quando o mouse estiver em 'li' a ação ocorre em .produto-preco*/
+    font-size: 28px;
+}
+
+.produtos li:active{        /*durante a ação do click do mouse*/
+    border-color: rgb(105, 145, 13);
+}
+
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;      /*negrito*/
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produto-preco{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;       /*margin: 10px 0 0;  ==  margin-top:10px*/
+}
+
+footer{
+    text-align: center;
+    color: white;
+    /*background: rgb(41, 38, 38);*/
+    background: url('../img/bg.jpg');
+    width: 100%;
+    padding: 40px 0;
+}
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    padding: 10px;
+}
+
+
+/*css pagina contato*/
+.mainContato{
+    width: 940px;
+    margin: 0 auto;
+}
+
+#formContato{
+    margin: 40px 0;
+}
+
+#formContato label, #formContato legend{
+    font-size: 20px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-padrao{
+    display: block;
+    margin-bottom: 12px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+
+    transition: 2s all;
+    /*gerencia a transição dos efeitos de 'hover'
+    ordenando um tempo de 1 segundo para a transição do background*/
+    cursor: pointer;
+    /*cursor pointer trata o ponteiro do mouse quando ele estiver sobre o elemento*/
+}
+
+.enviar:hover{
+    background-color: red;
+    /*transform: scale(1.2); 
+    transform: rotate(70deg);nessa sequencia um sobscreve o outro
+    transform: rotate(70deg) scale(3);*/
+    transform: scale(1.2);
+
+}
+
+table{
+    margin: 20px 0 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+.tLinha{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+.tabela{
+    margin-bottom: 25px;
+}
+
+/*css da pagina index*/
+.banner{
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em; /*em >> quantas maior que a fonte padrão*/
+    margin: 0 0 1em; /*margem em >> usa como base o tamanho da fonte*/
+
+    clear: left; /*limpa a ação do float: feft*/
+
+    color: rgba(0, 0, 0, 1); /*rgba trata a opacidade do texto*/
+
+    /*text-shadow: 2px 2px green;
+    cria sombra para o texto*/
+}
+
+.titulo-principal:hover{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.titulo-principal::first-letter{
+    font-weight: bold;
+}
+
+.titulo-principal::before{
+    content: "[";
+}
+
+.titulo-principal::after{
+    content: "]";
+}
+
+/*
+p:first-line{
+    font-style: italic;
+}*/
+
+/*Pseudo elementos
+    cria elementos através do CSS
+    *::first-letter - atua a primeira letra
+    *::first-line - atua na primera linha do elemento
+    ::before e ::after acrescentam ações antes e depois do
+    elemento
+*/
+
+
+.principal{
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE 55%, #888888);
+}
+
+/*
+    linear-gradient - faz o degradê das cores,
+    declarando a cor inicial ou final;
+    várias cores podem ser acrescentadas para a transição
+    (orange, red, blue, black)
+    também pode ser configurada a inclinação do degradê 
+    com (45deg, orange, blue)
+    também o tamanho das cores na pag com 60% 40%
+    (45deg, orange 60%, blue 40%)
+
+    radial-gradient >> similar, porém o degradê é circular
+*/
+
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-conteudo{
+    width: 940px;
+	margin: 0 auto;
+}
+
+.beneficios{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens{
+    line-height: 1.5;
+}
+
+.itens::before{
+    content: "★ "; /*utilizado unicode*/
+}
+
+.itens:first-child{
+    font-weight: bold;
+}
+
+.itens:last-child{
+    font-style: italic;
+}
+/*
+.itens:nth-child(2n){
+    font-style: italic;
+}*/
+
+/*
+pseudo classes: 
+> :first-child - Atua no primeiro item da lista.
+> :last-child - Atua no último item da lista
+> :nth-child() - Atua nos demais itens da lista
+steando no (2) a posição do elemento
+    - artificios com 'n' podem ser utilizados
+    (2n) - atua nas posições pares dos itens
+
+
+> todos os elementos de uma classe
+são 'irmãos'
+*/
+
+.imagem-beneficios{
+    width: 60%;
+    opacity: 1;
+    transition: 400ms;
+
+    /*width: calc(60%-10px);
+    pode ser utilizado calculos para otimizar
+    o tamanho dos elementos*/
+
+    box-shadow: 10px 10px 5px #000000;
+    /*box-shadow: 'eixoX' 'eixoY' 'intensidade da borda' 'cor';
+    box-shadow: -10px -10px 5px #000000; >> jogando com a posição da sombra;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5); >> jogando com a opacidade da sombra
+
+    box-shadow: -10px -10px 5px #000000, 10px 10px 5px rgba(0,0,0,0.5); 
+    mais de uma sombra pode ser adicionada ao elemento
+
+    box-shadow: inset 0 0 30px black;
+    >>sombra internat pode ser acrescentada ao elemento
+    */
+}
+
+.imagem-beneficios:hover{
+    opacity: 0.3;
+    /*opacidade eh percentual 
+    e pode variar de 0 (transparente)
+    até 1 (imagem normal)*/
+}
+
+
+.video{
+    width: 560px;
+    margin: 2em auto;    
+}
+
+/* caso o mesmo elemento tenha mais de uma config no CSS este é o critério de desempate
+id > class > tag
+100    10      1
+
+porém, o valor declarado na tag ('inline") é definitivo!
+caso o valor seja declarado direto inline não será substiruido
+<p color="blue"></p>
+*/
+/*
+Seletor >, para acessar os filhos de determinado elemento. Por exemplo, para acessar todos os p dentro de main:
+main > p {
+}
+Seletor +, para acessar o primeiro irmão de determinado elemento. Por exemplo, para acessar o primeiro p após um img:
+img + p {
+}
+Seletor ~, para acessar todos os irmãos de determinado elemento. Por exemplo, para acessar todos os p após um img:
+img ~ p {
+}
+Seletor not, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
+main p:not(#missao) {
+}
+*/
+
+@media screen and (max-width: 480px){
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+        width: auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios{
+        width: 100%;
+        margin: auto;
+    }
+}
